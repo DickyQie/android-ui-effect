@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingTop="8dp">
+    <TextView
+        android:id="@+id/item_timeline_time"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="18dp"
+        android:gravity="center_horizontal"
+        android:padding="4dp"
+        android:textColor="@color/colorAccent"
+        android:textSize="16sp"
+        android:text="2015-06-08\n09:56"
+        />
+
+    <RelativeLayout
+        android:id="@+id/item_timeline_icon_layout"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginRight="8dp"
+        android:layout_toRightOf="@id/item_timeline_time">
+
+        <com.timelinedemo.CircleImageView
+            android:id="@+id/item_timeline_icon_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@android:color/transparent"
+            app:civ_border_width="4dp" />
+
+        <ImageView
+            android:id="@+id/item_timeline_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerInParent="true"
+            android:scaleType="fitCenter" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/item_timeline_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_toRightOf="@id/item_timeline_icon_layout"
+        android:text="今日收入"
+        android:textColor="@color/colorPrimary"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/item_timeline_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_timeline_content"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@id/item_timeline_icon_layout"
+        android:text="$ 100"
+        android:textColor="@color/colorPrimary"
+        android:textSize="22sp" />
+    <View
+        android:id="@+id/item_timeline_view"
+        android:layout_width="2dp"
+        android:layout_height="60dp"
+        android:layout_alignLeft="@id/item_timeline_icon_layout"
+        android:layout_below="@id/item_timeline_icon_layout"
+        android:layout_marginLeft="23dp"
+        android:background="@color/colorAccent" />
+</RelativeLayout>
